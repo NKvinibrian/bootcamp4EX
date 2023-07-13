@@ -97,8 +97,7 @@
                             </div>
                             <div class="card-body">
 
-                                {# No "for" passamos "produto" para receber cada item da lista de "dados", assim,
-                                conseguimos acessar os atributos de cada produto #}
+                                {# No "for" passamos "produto" para receber cada item da lista de "dados", assim, conseguimos acessar os atributos de cada produto #}
                                 <strong>{{ produto.nome }}</strong>
                                 <p class="card-text">Preço: {{ produto.preco }}</p>
                                 <p class="card-text">{{ produto.descricao }}</p>
@@ -106,15 +105,13 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
                                         <button onclick="modalEditar('{{produto.id}}')" type="button" class="btn btn-primary">
-                                            <svg fill="#ffffff"xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960"width="20"><path d="M180-180h44l443-443-44-44-443 443v44Zm614-486L666-794l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248-120H120v-128l504-504 128 128Zm-107-21-22-22 44 44-22-22Z" /></svg>
+                                            <svg fill="#ffffff"xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M180-180h44l443-443-44-44-443 443v44Zm614-486L666-794l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248-120H120v-128l504-504 128 128Zm-107-21-22-22 44 44-22-22Z" /></svg>
                                         </button>
-                                        <button type="button" class="btn btn-danger"
-                                            onclick="removerProduto('{{ produto.id }}')"><svg fill="#ffffff"
-                                                xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960"
-                                                width="20">
-                                                <path
-                                                    d="M261-120q-24.75 0-42.375-17.625T201-180v-570h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438v-570ZM367-266h60v-399h-60v399Zm166 0h60v-399h-60v399ZM261-750v570-570Z" />
-                                            </svg></button>
+                                        <button type="button" class="btn btn-danger" onclick="removerProduto('{{ produto.id }}')">
+                                            <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                                                <path d="M261-120q-24.75 0-42.375-17.625T201-180v-570h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438v-570ZM367-266h60v-399h-60v399Zm166 0h60v-399h-60v399ZM261-750v570-570Z" />
+                                            </svg>
+                                        </button>
                                     </div>
                                     <small class="text-muted">9 mins</small>
                                 </div>
