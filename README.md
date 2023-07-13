@@ -39,6 +39,8 @@
 </tbody>
 </table>
 
+<h2>Instalar as Bibliotecas na venv:</h2>
+<p><code class="samp docutils literal notranslate"><span class="pre">pip install -r requirements.txt</span></code></p>
 
 <h2>Comandos migrates:</h2>
 <p><code class="samp docutils literal notranslate"><span class="pre">python manage.py makemigrations</span></code></p>
