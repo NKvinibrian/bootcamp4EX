@@ -10,9 +10,9 @@
 <col style="width: 67%">
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Platform</p></th>
+<tr class="row-odd"><th class="head"><p>Terminais</p></th>
 <th class="head"><p>Shell</p></th>
-<th class="head"><p>Command to activate virtual environment</p></th>
+<th class="head"><p>Comando para ativar o virtual environment(venv)</p></th>
 </tr>
 </thead>
 <tbody>
