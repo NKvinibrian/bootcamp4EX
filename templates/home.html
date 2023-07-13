@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,8 +11,8 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 
     <style>
@@ -33,132 +34,155 @@
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-md-7 py-4">
-                    <h4 class="text-white">About</h4>
-                    <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-                </div>
-                <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Contact</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                        <li><a href="#" class="text-white">Like on Facebook</a></li>
-                        <li><a href="#" class="text-white">Email me</a></li>
-                    </ul>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">Add some information about the album below, the author, or any other
+                            background context. Make it a few sentences long so folks can pick up some informative
+                            tidbits. Then, link them off to some social networking sites or contact information.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li><a href="#" class="text-white">Email me</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-                    <circle cx="12" cy="13" r="4"/>
-                </svg>
-                <strong>Ecom</strong>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-<main role="main">
-
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="w-100 justify-content-end d-flex">
-                <button type="button" onclick="$('#modal_add').show()" class="btn btn-outline-success mb-2">+</button>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2"
+                        viewBox="0 0 24 24" focusable="false">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                        <circle cx="12" cy="13" r="4" />
+                    </svg>
+                    <strong>Ecom</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <div class="row">
+        </div>
+    </header>
 
-{#                Loop para interar com a lista de produtos, no qual, que vem do contexto da view #}
-                {% for produto in dados %}
+    <main role="main">
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="w-100 justify-content-end d-flex">
+                    <button type="button" onclick="$('#modal_add').modal('show')"
+                        class="btn btn-outline-success mb-2">+</button>
+                </div>
+                <div class="row">
+
+                    {# Loop para interar com a lista de produtos, no qual, que vem do contexto da view #}
+                    {% for produto in dados %}
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm d-flex">
                             <div class="d-flex justify-content-center w-100">
-                                <img class="bd-placeholder-img card-img-top" style="max-height: 100%; height: 255px; width: max-content" src="{{ produto.imagem }}" />
+                                <img class="bd-placeholder-img card-img-top"
+                                    style="max-height: 100%; height: 255px; width: max-content"
+                                    src="{{ produto.imagem }}" />
                             </div>
                             <div class="card-body">
 
-{#                                No "for" passamos "produto" para receber cada item da lista de "dados", assim, conseguimos acessar os atributos de cada produto #}
+                                {# No "for" passamos "produto" para receber cada item da lista de "dados", assim,
+                                conseguimos acessar os atributos de cada produto #}
                                 <strong>{{ produto.nome }}</strong>
                                 <p class="card-text">Preço: {{ produto.preco }}</p>
                                 <p class="card-text">{{ produto.descricao }}</p>
 
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div >
-                                        <button type="button" class="btn btn-primary"><svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M180-180h44l443-443-44-44-443 443v44Zm614-486L666-794l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248-120H120v-128l504-504 128 128Zm-107-21-22-22 44 44-22-22Z"/></svg></button>
-                                        <button type="button" class="btn btn-danger" onclick="removerProduto('{{ produto.id }}')"><svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M261-120q-24.75 0-42.375-17.625T201-180v-570h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438v-570ZM367-266h60v-399h-60v399Zm166 0h60v-399h-60v399ZM261-750v570-570Z"/></svg></button>
+                                    <div>
+                                        <button type="button" class="btn btn-primary"><svg fill="#ffffff"
+                                                xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960"
+                                                width="20">
+                                                <path
+                                                    d="M180-180h44l443-443-44-44-443 443v44Zm614-486L666-794l42-42q17-17 42-17t42 17l44 44q17 17 17 42t-17 42l-42 42Zm-42 42L248-120H120v-128l504-504 128 128Zm-107-21-22-22 44 44-22-22Z" />
+                                            </svg></button>
+                                        <button type="button" class="btn btn-danger"
+                                            onclick="removerProduto('{{ produto.id }}')"><svg fill="#ffffff"
+                                                xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960"
+                                                width="20">
+                                                <path
+                                                    d="M261-120q-24.75 0-42.375-17.625T201-180v-570h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438v-570ZM367-266h60v-399h-60v399Zm166 0h60v-399h-60v399ZM261-750v570-570Z" />
+                                            </svg></button>
                                     </div>
                                     <small class="text-muted">9 mins</small>
                                 </div>
                             </div>
                         </div>
                     </div>
-                {% endfor %}
+                    {% endfor %}
 
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+            <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a
+                    href="/docs/4.3/getting-started/introduction/">getting started guide</a>.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modal_add" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adicionar Produto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form_add">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="img">Imagem</label>
+                            <input type="text" class="form-control" id="img">
+                        </div>
+                        <div class="form-group">
+                            <label for="preco">Preço</label>
+                            <input type="text" class="form-control" id="preco">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" onclick="submitAdd()" class="btn btn-primary">Adicionar</button>
+                </div>
             </div>
         </div>
     </div>
 
-</main>
-
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.3/getting-started/introduction/">getting started guide</a>.</p>
-    </div>
-</footer>
-
-<div class="modal" id="modal_add" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Adicionar Produto</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-          <form id="form_add">
-            <div class="form-group">
-              <label for="nome">Nome</label>
-              <input type="text" class="form-control" id="nome">
-            </div>
-            <div class="form-group">
-              <label for="img">Imagem</label>
-              <input type="text" class="form-control" id="img">
-            </div>
-            <div class="form-group">
-              <label for="preco">Preço</label>
-              <input type="text" class="form-control" id="preco">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-          <button type="button" onclick="submitAdd()" class="btn btn-primary">Adicionar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-<script>
-    function removerProduto(produtoId){
-        $.ajax({
+       <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+   
+    <script>
+        function removerProduto(produtoId) {
+            $.ajax({
                 type: "DELETE",
                 url: "/produto",
                 data: {
@@ -168,36 +192,39 @@
 
                 success: (data) => {
                     console.log(data)
+                    $("#modal_add").modal('hide')
                 },
                 error: (data) => {
                     console.log('Erro')
+                    $("#modal_add").modal('hide')
                 }
             });
-    }
+        }
 
-function submitAdd(){
+        function submitAdd() {
 
-      let data = {
-        nome: $("#nome").val(),
-        imagem: $("#img").val(),
-        preco: $("#preco").val()
-      }
-
-
-      $.ajax({
-            type: "POST",
-            url: "/produto",
-            data: data,
-            success: function (data) {
-               window.location.reload()
-            },
-            error: function (data) {
-
-               window.location.reload()
+            let data = {
+                nome: $("#nome").val(),
+                imagem: $("#img").val(),
+                preco: $("#preco").val()
             }
-      });
-    }
-</script>
+
+
+            $.ajax({
+                type: "POST",
+                url: "/produto",
+                data: data,
+                success: function (data) {
+                    window.location.reload()
+                },
+                error: function (data) {
+
+                    window.location.reload()
+                }
+            });
+        }
+    </script>
 
 </body>
+
 </html>
