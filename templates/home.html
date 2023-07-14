@@ -190,11 +190,8 @@
         function removerProduto(produtoId) {
             $.ajax({
                 type: "DELETE",
-                url: "/produto",
-                data: {
-                    "csrfmiddlewaretoken": '{{ csrf_token }}',
-                    "id": produtoId
-                },
+                url: "/produto" + "?" + $.param({"id": produtoId}),
+
 
                 success: (data) => {
                     console.log(data)
@@ -213,7 +210,8 @@
                 id,
                 nome: $("#nome").val(),
                 imagem: $("#img").val(),
-                preco: $("#preco").val()
+                preco: $("#preco").val(),
+                "csrfmiddlewaretoken": '{{ csrf_token }}',
             }
 
 
